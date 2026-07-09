@@ -1,5 +1,3 @@
-import Image from "next/image";
-import { FrameMarks } from "@/components/frame-marks/frame-marks";
 import { Reveal } from "@/components/reveal/reveal";
 import { addOnServices, servicePackages } from "@/data/services";
 
@@ -31,28 +29,16 @@ export const ServicesSection = () => (
               <p className="service-package__price">{service.price}</p>
             </div>
 
-            <div className="service-package__body">
-              <div className="service-package__media frame">
-                <Image
-                  src={service.image.src}
-                  alt={service.image.alt}
-                  fill
-                  sizes="(max-width: 900px) 100vw, 280px"
-                />
-                <FrameMarks />
-              </div>
-
-              <ul className="service-package__features">
-                {service.features.map((feature) => (
-                  <li key={feature} className="service-package__feature">
-                    <span className="service-package__mark" aria-hidden="true">
-                      ✓
-                    </span>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <ul className="service-package__features">
+              {service.features.map((feature) => (
+                <li key={feature} className="service-package__feature">
+                  <span className="service-package__mark" aria-hidden="true">
+                    ✓
+                  </span>
+                  {feature}
+                </li>
+              ))}
+            </ul>
           </Reveal>
         ))}
       </div>
@@ -72,18 +58,7 @@ export const ServicesSection = () => (
               variant="fade"
               delay={index * 90}
             >
-              <div className="addon-row__main">
-                <div className="addon-row__media frame">
-                  <Image
-                    src={addon.image.src}
-                    alt={addon.image.alt}
-                    fill
-                    sizes="72px"
-                  />
-                  <FrameMarks />
-                </div>
-                <span className="addon-row__name">{addon.title}</span>
-              </div>
+              <span className="addon-row__name">{addon.title}</span>
               <span className="addon-row__price">{addon.price}</span>
             </Reveal>
           ))}

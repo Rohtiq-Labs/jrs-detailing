@@ -5,7 +5,7 @@ import { contact } from "@/data/contact";
 
 const menuLinks = [
   { num: "01", label: "Services", href: "#services" },
-  { num: "02", label: "Gallery", href: "#showcase" },
+  { num: "02", label: "Gallery", href: "#gallery" },
   { num: "03", label: "Reviews", href: "#testimonials" },
   { num: "04", label: "Contact", href: "#contact" },
   { num: "05", label: "Book Now", href: "#booking" },

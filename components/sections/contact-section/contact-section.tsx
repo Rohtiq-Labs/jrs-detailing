@@ -1,8 +1,5 @@
-import Image from "next/image";
-import { FrameMarks } from "@/components/frame-marks/frame-marks";
 import { Reveal } from "@/components/reveal/reveal";
 import { contact, contactItems } from "@/data/contact";
-import { sectionImages } from "@/data/images";
 
 export const ContactSection = () => (
   <section className="contact" id="contact">
@@ -10,16 +7,6 @@ export const ContactSection = () => (
       <Reveal className="contact__head" variant="up">
         <p className="eyebrow">Reach Us</p>
         <h2 className="contact__title">Contact</h2>
-      </Reveal>
-
-      <Reveal className="contact__visual frame" variant="scale" delay={80}>
-        <Image
-          src={sectionImages.contact.src}
-          alt={sectionImages.contact.alt}
-          fill
-          sizes="(max-width: 900px) 100vw, 1200px"
-        />
-        <FrameMarks />
       </Reveal>
 
       <div className="contact__grid">

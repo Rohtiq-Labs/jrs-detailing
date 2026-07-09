@@ -4,22 +4,12 @@ export type ServicePackage = {
   tagline: string;
   price: string;
   features: string[];
-  image: {
-    src: string;
-    alt: string;
-  };
 };
 
 export type AddOnService = {
   title: string;
   price: string;
-  image: {
-    src: string;
-    alt: string;
-  };
 };
-
-import { sectionImages } from "@/data/images";
 
 export const servicePackages: ServicePackage[] = [
   {
@@ -27,7 +17,6 @@ export const servicePackages: ServicePackage[] = [
     title: "Interior Detail",
     tagline: "Deep clean inside",
     price: "$55",
-    image: sectionImages.services.interior,
     features: [
       "Full interior vacuum",
       "Dashboard & console wipe-down",
@@ -43,7 +32,6 @@ export const servicePackages: ServicePackage[] = [
     title: "Exterior Detail",
     tagline: "A fresh, clean finish",
     price: "$65",
-    image: sectionImages.services.exterior,
     features: [
       "Hand wash & rinse",
       "Wheel & tire cleaning",
@@ -59,7 +47,6 @@ export const servicePackages: ServicePackage[] = [
     title: "Full Detail",
     tagline: "The complete package",
     price: "$120",
-    image: sectionImages.services.full,
     features: [
       "Everything in Interior Detail",
       "Everything in Exterior Detail",
@@ -72,19 +59,7 @@ export const servicePackages: ServicePackage[] = [
 ];
 
 export const addOnServices: AddOnService[] = [
-  {
-    title: "Pet Hair Removal",
-    price: "$15–$25",
-    image: sectionImages.services.addons.petHair,
-  },
-  {
-    title: "Stain Removal",
-    price: "$15–$25",
-    image: sectionImages.services.addons.stain,
-  },
-  {
-    title: "Headlight Restoration",
-    price: "$40–$65",
-    image: sectionImages.services.addons.headlight,
-  },
+  { title: "Pet Hair Removal", price: "$15–$25" },
+  { title: "Stain Removal", price: "$15–$25" },
+  { title: "Headlight Restoration", price: "$40–$65" },
 ];

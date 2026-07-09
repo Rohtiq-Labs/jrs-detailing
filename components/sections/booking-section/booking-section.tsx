@@ -1,20 +1,9 @@
-import Image from "next/image";
 import { FrameMarks } from "@/components/frame-marks/frame-marks";
 import { Reveal } from "@/components/reveal/reveal";
 import { contact } from "@/data/contact";
-import { sectionImages } from "@/data/images";
 
 export const BookingSection = () => (
   <section className="booking frame" id="booking">
-    <div className="booking__media" aria-hidden="true">
-      <Image
-        src={sectionImages.booking.src}
-        alt=""
-        fill
-        sizes="100vw"
-      />
-    </div>
-
     <FrameMarks />
     <div className="wrap booking__content">
       <Reveal

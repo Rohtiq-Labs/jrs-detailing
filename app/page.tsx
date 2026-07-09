@@ -3,7 +3,7 @@ import { SiteNav } from "@/components/site-nav/site-nav";
 import { SiteFooter } from "@/components/site-footer/site-footer";
 import { HeroSection } from "@/components/sections/hero-section/hero-section";
 import { ServicesSection } from "@/components/sections/services-section/services-section";
-import { ShowcaseSection } from "@/components/sections/showcase-section/showcase-section";
+import { GallerySection } from "@/components/sections/gallery-section/gallery-section";
 import { TestimonialsSection } from "@/components/sections/testimonials-section/testimonials-section";
 import { ConvenienceSection } from "@/components/sections/convenience-section/convenience-section";
 import { ContactSection } from "@/components/sections/contact-section/contact-section";
@@ -18,7 +18,7 @@ export default function Home() {
       <main id="top">
         <HeroSection />
         <ServicesSection />
-        <ShowcaseSection />
+        <GallerySection />
         <TestimonialsSection />
         <ConvenienceSection />
         <ContactSection />
