@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" fill="none" role="img" aria-label="JRS Detailing">
+  <rect width="180" height="180" fill="#000000" />
+  <path
+    d="M24 24h28M24 24v28M156 24h-28M156 24v28M24 156h28M24 156v-28M156 156h-28M156 156v-28"
+    stroke="#ffffff"
+    stroke-opacity="0.45"
+    stroke-width="2"
+  />
+  <text
+    x="90"
+    y="108"
+    text-anchor="middle"
+    fill="#ffffff"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="52"
+    font-weight="600"
+    letter-spacing="0.06em"
+  >
+    JRS
+  </text>
+  <text
+    x="90"
+    y="138"
+    text-anchor="middle"
+    fill="#ffffff"
+    fill-opacity="0.58"
+    font-family="Helvetica, Arial, sans-serif"
+    font-size="14"
+    font-weight="500"
+    letter-spacing="0.28em"
+  >
+    DETAILING
+  </text>
+</svg>

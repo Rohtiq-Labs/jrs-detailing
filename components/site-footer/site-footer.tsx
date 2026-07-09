@@ -1,28 +1,29 @@
+import { Reveal } from "@/components/reveal/reveal";
+import { contact } from "@/data/contact";
+
 export const SiteFooter = () => (
   <footer>
     <div className="wrap">
-      <div className="footer__row">
+      <Reveal className="footer__row" variant="fade">
         <div>
           <p className="footer__brand">JRS Detailing</p>
           <p className="footer__sub">
             Student-Owned Mobile Auto Detailing
             <br />
-            Leesburg, VA
+            {contact.location.city}
           </p>
         </div>
         <div className="footer__links">
-          <a
-            href="https://instagram.com/jrsdetailing"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Instagram
-          </a>
+          <a href={`tel:${contact.phone.tel}`}>Call</a>
+          <a href={`sms:${contact.phone.tel}`}>Text</a>
+          <a href={`mailto:${contact.email}`}>Email</a>
           <a href="#booking">Book Now</a>
         </div>
-      </div>
+      </Reveal>
       <div className="footer__rule" />
-      <p className="footer__copy">© 2026 JRS Detailing. All rights reserved.</p>
+      <Reveal as="p" className="footer__copy" variant="fade" delay={120}>
+        © 2026 JRS Detailing. All rights reserved.
+      </Reveal>
     </div>
   </footer>
 );

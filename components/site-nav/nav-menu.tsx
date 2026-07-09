@@ -1,12 +1,13 @@
 "use client";
 
 import { useEffect } from "react";
+import { contact } from "@/data/contact";
 
 const menuLinks = [
   { num: "01", label: "Services", href: "#services" },
   { num: "02", label: "Gallery", href: "#showcase" },
   { num: "03", label: "Reviews", href: "#testimonials" },
-  { num: "04", label: "Service Area", href: "#convenience" },
+  { num: "04", label: "Contact", href: "#contact" },
   { num: "05", label: "Book Now", href: "#booking" },
 ];
 
@@ -64,15 +65,13 @@ export const NavMenu = ({ open, onClose }: NavMenuProps) => {
 
         <div className="nav-menu__foot">
           <a
-            href="https://instagram.com/jrsdetailing"
-            target="_blank"
-            rel="noopener noreferrer"
+            href={`tel:${contact.phone.tel}`}
             className="nav-menu__social"
             onClick={onClose}
           >
-            Instagram
+            {contact.phone.display}
           </a>
-          <p className="nav-menu__loc">Leesburg, Virginia</p>
+          <p className="nav-menu__loc">{contact.location.city}</p>
         </div>
       </nav>
     </div>

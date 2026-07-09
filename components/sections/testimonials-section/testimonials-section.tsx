@@ -1,25 +1,36 @@
 import { Reveal } from "@/components/reveal/reveal";
+import { testimonials } from "@/data/testimonials";
+import { StarRating } from "./star-rating";
+import { TestimonialsCarousel } from "./testimonials-carousel";
 
 export const TestimonialsSection = () => (
   <section className="testimonials" id="testimonials">
-    <div className="wrap testi">
-      <Reveal as="span" className="quote-mark">
-        &ldquo;
-      </Reveal>
-      <Reveal as="p" className="testi__quote">
-        They came right to my apartment and my car looked better than the day I
-        bought it. I genuinely didn&apos;t expect that level of detail.
-      </Reveal>
-      <Reveal as="p" className="testi__name">
-        — Sarah M., Leesburg
+    <div className="wrap">
+      <Reveal className="testimonials__head" variant="up">
+        <p className="eyebrow">Reviews</p>
+        <h2 className="testimonials__title">What Our Client Says</h2>
       </Reveal>
 
-      <Reveal className="testi--second">
-        <p className="testi__quote">
-          Affordable, professional, and they actually showed up on time. Booked
-          again the next month.
-        </p>
-        <p className="testi__name">— Daniel R., Ashburn</p>
+      <div className="testimonials__desktop">
+        {testimonials.map((item, index) => (
+          <Reveal
+            key={item.name}
+            className="testi-card"
+            variant="in"
+            delay={index * 140}
+          >
+            <StarRating count={item.stars} />
+            <p className="testi-card__quote">&ldquo;{item.quote}&rdquo;</p>
+            <p className="testi-card__name">— {item.name}</p>
+            {index < testimonials.length - 1 ? (
+              <div className="testi-card__rule" aria-hidden="true" />
+            ) : null}
+          </Reveal>
+        ))}
+      </div>
+
+      <Reveal variant="up" delay={80}>
+        <TestimonialsCarousel items={testimonials} />
       </Reveal>
     </div>
   </section>

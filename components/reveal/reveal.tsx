@@ -15,14 +15,16 @@ type RevealProps<T extends ElementType = "div"> = {
   className?: string;
   style?: CSSProperties;
   as?: T;
+  delay?: number;
 };
 
 export const Reveal = <T extends ElementType = "div">({
   children,
-  variant = "default",
+  variant = "up",
   className = "",
   style,
   as,
+  delay = 0,
 }: RevealProps<T>) => {
   const Component = (as ?? "div") as ElementType;
   const ref = useRef<HTMLElement>(null);
@@ -40,7 +42,7 @@ export const Reveal = <T extends ElementType = "div">({
           }
         });
       },
-      { threshold: 0.15, rootMargin: "0px 0px -8% 0px" },
+      { threshold: 0.12, rootMargin: "0px 0px -4% 0px" },
     );
 
     observer.observe(element);
@@ -51,9 +53,14 @@ export const Reveal = <T extends ElementType = "div">({
   return (
     <Component
       ref={ref}
-      data-reveal={variant === "scale" ? "scale" : true}
+      data-reveal={variant}
       className={className}
-      style={style}
+      style={
+        {
+          ...style,
+          "--reveal-delay": `${delay}ms`,
+        } as CSSProperties
+      }
     >
       {children}
     </Component>

@@ -6,6 +6,7 @@ import { ServicesSection } from "@/components/sections/services-section/services
 import { ShowcaseSection } from "@/components/sections/showcase-section/showcase-section";
 import { TestimonialsSection } from "@/components/sections/testimonials-section/testimonials-section";
 import { ConvenienceSection } from "@/components/sections/convenience-section/convenience-section";
+import { ContactSection } from "@/components/sections/contact-section/contact-section";
 import { BookingSection } from "@/components/sections/booking-section/booking-section";
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
         <ShowcaseSection />
         <TestimonialsSection />
         <ConvenienceSection />
+        <ContactSection />
         <BookingSection />
         <SiteFooter />
       </main>

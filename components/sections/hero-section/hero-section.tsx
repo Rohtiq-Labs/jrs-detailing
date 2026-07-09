@@ -1,11 +1,13 @@
 import Image from "next/image";
+import { Reveal } from "@/components/reveal/reveal";
+import { sectionImages } from "@/data/images";
 
 export const HeroSection = () => (
   <section className="hero">
     <div className="hero__media">
       <Image
-        src="https://images.unsplash.com/photo-1722385640799-4ee84eb90038?auto=format&fit=crop&w=1800&q=75"
-        alt="Dark studio front three-quarter view of a detailed luxury vehicle"
+        src={sectionImages.hero.src}
+        alt={sectionImages.hero.alt}
         fill
         priority
         sizes="100vw"
@@ -13,20 +15,20 @@ export const HeroSection = () => (
     </div>
 
     <div className="hero__body">
-      <h1 className="hero__headline">
+      <Reveal as="h1" className="hero__headline" variant="in" delay={120}>
         Student-Owned.
         <em>Premium Results.</em>
-      </h1>
-      <div className="hero__foot">
+      </Reveal>
+      <Reveal className="hero__foot" variant="up" delay={280}>
         <a href="#booking" className="btn-primary">
           Book Now →
         </a>
-      </div>
+      </Reveal>
     </div>
 
-    <div className="hero__scroll">
+    <Reveal className="hero__scroll" variant="fade" delay={480}>
       <span className="hero__scroll-line" aria-hidden="true" />
       Scroll
-    </div>
+    </Reveal>
   </section>
 );

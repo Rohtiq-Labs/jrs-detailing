@@ -1,4 +1,4 @@
-export type RevealVariant = "default" | "scale";
+export type RevealVariant = "up" | "in" | "scale" | "left" | "right" | "fade";
 
 export type RevealProps = {
   children: React.ReactNode;
@@ -6,4 +6,5 @@ export type RevealProps = {
   className?: string;
   style?: React.CSSProperties;
   as?: keyof React.JSX.IntrinsicElements;
+  delay?: number;
 };
